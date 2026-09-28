@@ -20,6 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nInterest: ${data.get("interest")}\n\nMessage:\n${data.get("message") || ""}`
     );
     // Replace this address before publishing the site.
-    window.location.href = `mailto:REPLACE_WITH_SOCIETY_EMAIL?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:infosociety2027@gmail.com?subject=${subject}&body=${body}`;
   });
 });
