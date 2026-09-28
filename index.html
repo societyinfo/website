@@ -157,17 +157,65 @@
           <p>✓ Help with communication, website or events</p>
         </div>
       </div>
-      <form class="interest-form" id="interestForm">
-        <label>Name <input name="name" required autocomplete="name"></label>
-        <label>Email <input type="email" name="email" required autocomplete="email"></label>
-        <label>How would you like to contribute? <select name="interest">
-          <option>Share ideas / stay informed</option><option>Professional expertise roster</option><option>Language & culture exchange</option><option>Mentoring</option><option>Research & innovation</option><option>Entrepreneurship</option><option>Events / communication / website</option><option>Other</option>
-        </select></label>
-        <label>Message <textarea name="message" rows="5" placeholder="Tell us a little about your interests or ideas (optional)"></textarea></label>
-        <button class="btn btn-primary" type="submit">Prepare my expression of interest <span>→</span></button>
-       <p class="form-note"> When you submit this form, your email client will open with your expression of interest prepared for submission to the society.
-</p>
-      </form>
+      <form class="interest-form" id="interestForm"
+      action="https://api.web3forms.com/submit"
+      method="POST">
+
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="7deec0be-c383-4bb3-b62f-a010f954d055">
+
+  <!-- Email subject -->
+  <input type="hidden" name="subject"
+         value="Expression of Interest – NPRE Luxembourg">
+
+  <!-- Name shown as sender/source -->
+  <input type="hidden" name="from_name"
+         value="NPRE Luxembourg Website">
+
+  <!-- Spam protection -->
+  <input type="checkbox" name="botcheck"
+         style="display:none;">
+
+  <label>
+    Name
+    <input name="name" required autocomplete="name">
+  </label>
+
+  <label>
+    Email
+    <input type="email" name="email" required autocomplete="email">
+  </label>
+
+  <label>
+    How would you like to contribute?
+    <select name="interest">
+      <option>Share ideas / stay informed</option>
+      <option>Professional expertise roster</option>
+      <option>Language & culture exchange</option>
+      <option>Mentoring</option>
+      <option>Research & innovation</option>
+      <option>Entrepreneurship</option>
+      <option>Events / communication / website</option>
+      <option>Other</option>
+    </select>
+  </label>
+
+  <label>
+    Message
+    <textarea name="message" rows="5"
+      placeholder="Tell us a little about your interests or ideas (optional)"></textarea>
+  </label>
+
+  <button class="btn btn-primary" type="submit">
+    Submit my expression of interest <span>→</span>
+  </button>
+
+  <p class="form-note">
+    Thank you for your interest in NPRE Luxembourg.
+    Your message will be sent to the society team.
+  </p>
+
+</form>
     </div>
   </section>
 
